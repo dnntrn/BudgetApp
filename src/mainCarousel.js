@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 
-import { View, ScrollView, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import Status from './dashboardSlides/budgetStatus'
 
-
-const { width } = Dimensions.get('window');
-const height = width * 0.8
-
+import styles from './styles/mainCarousel.style'
 class mainCarousel extends Component {
     constructor(props) {
       super(props)
@@ -35,28 +32,9 @@ class mainCarousel extends Component {
       )
 
     }
-    console.log('Please provide images');
+    console.log('Please provide slides');
     return null;
   }
 }
-
-const styles = StyleSheet.create({
-  slide: {
-    width,
-    height,
-  },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  scrollContainer: {
-    height,
-  },
-  image: {
-    width,
-    height,
-  },
-});
 
 export default mainCarousel
